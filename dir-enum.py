@@ -1,7 +1,7 @@
 import pyfiglet
 import requests
 
-welcome_banner=pyfiglet.figlet_format("Port Scanner")
+welcome_banner=pyfiglet.figlet_format("Directory Discovery")
 print(welcome_banner)
 
 target=input("Enter target host: ")
