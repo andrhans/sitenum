@@ -1,6 +1,7 @@
 import pyfiglet
 import requests
 import sys
+from datetime import datetime
 
 welcome_banner=pyfiglet.figlet_format("Directory Enumeration")
 print(welcome_banner)
@@ -13,14 +14,19 @@ def request(url):
     except requests.exceptions.ConnectionError:
         pass
 
+print("*" * 50)
+print("Scan started...")
+print("Start time: " + str(datetime.now()))
+print("Scanning host: " +url)
+print("*" * 50)
+
 if len(sys.argv) == 3:
     wordlist=open(sys.argv[2], 'r')
     for line in wordlist:
         directory = line.strip()
-        target=url+"/"+directory
-        response=request(target)
+        response=request(url+"/"+directory)
         if response:
-            print("[*] Discovered directory: " + target)
+            print("\n[*] Discovered directory: "+directory)
         else:
             continue
 else:
