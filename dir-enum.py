@@ -14,11 +14,10 @@ def request(url):
     except requests.exceptions.ConnectionError:
         pass
 
-print("*" * 50)
-print("Scan started...")
+print("*"*65)
+print("Scanning target: " +url+"\nWordlist: "+sys.argv[2])
 print("Start time: " + str(datetime.now()))
-print("Scanning host: " +url)
-print("*" * 50)
+print("*"*65+"\n")
 
 if len(sys.argv) == 3:
     wordlist=open(sys.argv[2], 'r')
@@ -26,7 +25,7 @@ if len(sys.argv) == 3:
         directory = line.strip()
         response=request(url+"/"+directory)
         if response:
-            print("\n[*] Discovered directory: "+directory)
+            print("[*] Discovered directory: "+directory)
         else:
             continue
 else:
