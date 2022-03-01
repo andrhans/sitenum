@@ -1,5 +1,5 @@
 # README.md
-Files in the repository:
+Files in repository:
 * [dir-disc.py](#directory-discovery)
 * [dir-enum.py](#directory-enumeration)
 
@@ -35,6 +35,7 @@ Enter wordlist location: wordlist.txt
 
 `dir-enum.py` is a directory enumeration tool written in python that allows arguments and is slightly more functional.
 
+### Usage
 ```
 $ python dir-enum.py http://127.0.0.1 wordlist.txt
  ____  _               _                   
