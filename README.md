@@ -1,4 +1,4 @@
-# README.md
+# sitenum
 Files in repository:
 * [dir-disc.py](#directory-discovery)
 * [dir-enum.py](#directory-enumeration)
